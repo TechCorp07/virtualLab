@@ -1,20 +1,17 @@
-const express = require('express');
+const express = require("express"); 
+const connectDb = require("./config/dbConnection");
+const errorHandler = require("./middleware/errorHandler");
+const dotenv = require("dotenv").config();
+
+connectDb();
+const app = express();
 
 const port = process.env.PORT || 3000;
 
-const app = express();
-
-app.set("view engine", "ejs");
-
-app.get('/',(req, res) => 
-{
-    console.log('test');
-    res.send('Hi')
-})
-
-const userRouter = require("./routes/users")
-
-app.use("/users", userRouter);
+const userRouter = require("./routes/userRoutes")
+app.use(express.json()); 
+app.use("/api/users", userRouter);  //Middleware
+app.use(errorHandler);
 
 app.listen (port,() => 
 {
