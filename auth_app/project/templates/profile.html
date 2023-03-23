@@ -1,8 +1,77 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Welcome, {{ name }}!</h1>
-    <h1>Lets Get Started</h1>
+    <div class="wrapper">
+        <div class="title">
+            Welcome, {{ name }}!
+            Lets Get Started
+          Choose your Components
+        </div>
+      
+        <div class="container">
+          <label class="option_item">
+            <input type="checkbox" class="checkbox">
+            <div class="option_inner capacitor">
+              <div class="tickmark"></div>
+              <div class="name">Capacitor</div>
+            </div>
+          </label>
+          <label class="option_item">
+            <input type="checkbox" class="checkbox" checked>
+            <div class="option_inner resistor">
+              <div class="tickmark"></div>
+              <div class="name">Resistor</div>
+            </div>
+          </label>
+          <label class="option_item">
+            <input type="checkbox" class="checkbox">
+            <div class="option_inner diode">
+              <div class="tickmark"></div>
+              <div class="name">Diode</div>
+            </div>
+          </label>
+          <label class="option_item">
+            <input type="checkbox" class="checkbox" checked>
+            <div class="option_inner inductor">
+              <div class="tickmark"></div>
+              <div class="name">Inductor</div>
+            </div>
+          </label>
+          <label class="option_item">
+            <input type="checkbox" class="checkbox" checked>
+            <div class="option_inner power">
+              <div class="tickmark"></div>
+              <div class="name">Power Supply</div>
+            </div>
+          </label>
+          <label class="option_item">
+            <input type="checkbox" class="checkbox">
+            <div class="option_inner transistor">
+              <div class="tickmark"></div>
+              <div class="name">Transistor</div>
+            </div>
+          </label>
+          <label class="option_item">
+            <input type="checkbox" class="checkbox" checked>
+            <div class="option_inner led">
+              <div class="tickmark"></div>
+              <div class="name">LED</div>
+            </div>
+          </label>
+          <label class="option_item">
+            <input type="checkbox" class="checkbox">
+            <div class="option_inner ground">
+              <div class="tickmark"></div>
+              <div class="name">Ground</div>
+            </div>
+          </label>
+          <h4>
+          <button type="button" onclick="alert('ERROR 404! Spice Models cannot be found')">Next!</button>
+          </h4>
+        </div>
+      
+      </div>
+
     <!--div class="node01">
         <h2>Node 01</h2>
         <form>
