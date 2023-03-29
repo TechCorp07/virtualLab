@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+/* @import { DotEndpoint } from "@jsplumb/core" */
 
 /* * {
     margin: 0;
@@ -298,13 +299,31 @@ li a:hover:not(.active) {
     background-color: #111;
 }
 
+
 .active {
     background-color: #04AA6D;
 }
 
-/* div {
-    width: 320px;
-    padding: 10px;
+#grid {
+    width: 600px;
+    padding: 300px;
     border: 5px solid gray;
     margin: 0;
-} */
+    position: relative;
+    left: 120px;
+    top: 10px;
+    background-color: #d5d3da;
+}
+
+.jtk-connector {
+    path {
+        stroke: #e03571;
+        stroke-width: 3;
+    }
+}
+
+.jtk-endpoint {
+    circle: {
+        fill: #e03571;
+    }
+}

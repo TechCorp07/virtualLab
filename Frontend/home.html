@@ -6,7 +6,11 @@
     <title>Draggable Div</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" rel="script" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.0/js/jsplumb.min.js" rel="script" />
     <!-- Stylesheet -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.0/js/jsplumb.min.js"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -18,6 +22,7 @@
             <li><a class="active" href="#">Virtual Labs</a></li>
         </ul>
 
+        <div id="grid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="components">
             <div id="cap">
                 <p>Capacitor</p>
@@ -46,8 +51,10 @@
             <div id="inductor">
                 <p>Inductor</p>
             </div>
+
         </div>
     </div>
+
     <!-- Script -->
     <script src="script.js"></script>
 </body>
