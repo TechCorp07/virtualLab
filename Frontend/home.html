@@ -6,11 +6,7 @@
     <title>Draggable Div</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" rel="script" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.0/js/jsplumb.min.js" rel="script" />
     <!-- Stylesheet -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.0/js/jsplumb.min.js"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -23,39 +19,50 @@
         </ul>
 
         <div id="grid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="components">
-            <div id="cap">
-                <p>Capacitor</p>
-            </div>
-            <div id="res">
-                <p>Resistor</p>
-            </div>
-            <div id="pow">
-                <p>Power</p>
-            </div>
-            <div id="diode">
-                <p>Diode</p>
-            </div>
-            <div id="controller">
-                <p>Controller</p>
-            </div>
-            <div id="trans">
-                <p>Transistor</p>
-            </div>
-            <div id="led">
-                <p>LED</p>
-            </div>
-            <div id="gnd">
-                <p>Ground</p>
-            </div>
-            <div id="inductor">
-                <p>Inductor</p>
-            </div>
-
+        <div class="sim">
+            <span class="fa fa-caret-square-o-right"></span>
+            <input type="submit" value="Simulate">
+        </div>
+        <div id="source">
+            <ul>
+                <li id="cap">
+                    <p>Capacitor</p>
+                </li>
+                <li id="res">
+                    <p>Resistor</p>
+                </li>
+                <li id="pow">
+                    <p>Power</p>
+                </li>
+                <li id="diode">
+                    <p>Diode</p>
+                </li>
+            </ul>
+        </div>
+        <div id="target">
+            <ul>
+                <li id="controller">
+                    <p>Controller</p>
+                </li>
+                <li id="trans">
+                    <p>Transistor</p>
+                </li>
+                <li id="led">
+                    <p>LED</p>
+                </li>
+                <li id="gnd">
+                    <p>Ground</p>
+                </li>
+                <li id="inductor">
+                    <p>Inductor</p>
+                </li>
+            </ul>
         </div>
     </div>
 
     <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.0/js/jsplumb.min.js"></script>
     <script src="script.js"></script>
 </body>
 

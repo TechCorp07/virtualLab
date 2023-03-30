@@ -415,7 +415,8 @@ draggableElem8.addEventListener(events[deviceType].up, (e) => {
 
 jQuery(document).ready(function () {
     var targetOption = {
-        anchor: "LeftMiddle",
+        tolerance: "touch",
+        anchor: "Top",
         maxConnections: 1,
         isSource: false,
         isTarget: true,
@@ -427,7 +428,7 @@ jQuery(document).ready(function () {
 
     var sourceOption = {
         tolerance: "touch",
-        anchor: "RightMiddle",
+        anchor: "Top",
         maxConnections: 1,
         isSource: true,
         isTarget: false,
@@ -447,19 +448,19 @@ jQuery(document).ready(function () {
     var questionEndpoints = []; // 'source' and 'target' endpoints
 
     // "source" click handler
-    jQuery("#select_list_lebensbereiche ul > li").click(function () {
+    jQuery("#source ul > li").click(function () {
         //remove existing start endpoint, if any:
-        jsPlumb.deleteEndpoint(questionEndpoints[0]);
+        // jsPlumb.deleteEndpoint(questionEndpoints[0]);
         // add a new one on the clicked element:
         questionEndpoints[0] = jsPlumb.addEndpoint(jQuery(this), sourceOption);
         connectEndpoints();
     });
 
     // "target" endpoint
-    jQuery("#select_list_wirkdimensionen ul > li").click(function () {
+    jQuery("#target ul > li").click(function () {
         if (!questionEndpoints[0]) return; // don't respond if a source hasn't been selected
         // remove existing endpoint if any
-        jsPlumb.deleteEndpoint(questionEndpoints[1]);
+        // jsPlumb.deleteEndpoint(questionEndpoints[1]);
         //create a new one:
         questionEndpoints[1] = jsPlumb.addEndpoint(jQuery(this), targetOption);
         connectEndpoints();

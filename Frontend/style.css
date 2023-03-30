@@ -215,7 +215,8 @@ body {
 #controller,
 #led,
 #gnd,
-#inductor {
+#inductor,
+.sim input[type="submit"] {
     position: absolute;
     background-color: #ffffff;
     font-size: 1.0em;
@@ -315,15 +316,17 @@ li a:hover:not(.active) {
     background-color: #d5d3da;
 }
 
-.jtk-connector {
-    path {
-        stroke: #e03571;
-        stroke-width: 3;
-    }
+
+.jtk-connector path {
+    stroke: #0c0b0b;
+    stroke-width: 3;
 }
 
-.jtk-endpoint {
-    circle: {
-        fill: #e03571;
-    }
+.jtk-endpoint circle {
+    fill: #0c0b0b;
+}
+
+.sim input[type="submit"] {
+    left: 93%;
+    top: 90%;
 }
