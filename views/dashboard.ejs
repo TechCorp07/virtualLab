@@ -1,3 +1,4 @@
+<<<<<<< HEAD:views/dashboard.ejs
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,4 +60,74 @@
     <script src="public/script.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draggable Div</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="container">
+        <ul>
+            <li style="float:right"><a href="#home">Logout</a></li>
+            <li style="float:right"><a href="#news">Profile</a></li>
+            <li><a class="active" href="#">Virtual Labs</a></li>
+        </ul>
+
+        <div id="grid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="sim">
+            <span class="fa fa-caret-square-o-right"></span>
+            <input type="submit" value="Simulate">
+        </div>
+        <div id="source">
+            <ul>
+                <li id="cap">
+                    <p>Capacitor</p>
+                </li>
+                <li id="res">
+                    <p>Resistor</p>
+                </li>
+                <li id="pow">
+                    <p>Power</p>
+                </li>
+                <li id="diode">
+                    <p>Diode</p>
+                </li>
+            </ul>
+        </div>
+        <div id="target">
+            <ul>
+                <li id="controller">
+                    <p>Controller</p>
+                </li>
+                <li id="trans">
+                    <p>Transistor</p>
+                </li>
+                <li id="led">
+                    <p>LED</p>
+                </li>
+                <li id="gnd">
+                    <p>Ground</p>
+                </li>
+                <li id="inductor">
+                    <p>Inductor</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.0/js/jsplumb.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+>>>>>>> 0d394cbcd02087a6702fd2811af51c3b535e99b8:Frontend/home.html
 </html>
