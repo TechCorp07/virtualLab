@@ -1,4 +1,4 @@
-const express = require("express"); 
+const express = require("express");
 const connectDb = require("./config/dbConnection");
 const errorHandler = require("./middleware/errorHandler");
 const dotenv = require("dotenv").config();
@@ -8,8 +8,8 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-const userRouter = require("./routes/userRoutes")
 app.use(express.json()); 
+const userRouter = require("./routes/userRoutes");
 app.use("/api/users", userRouter);  //Middleware
 app.use(errorHandler);
 
